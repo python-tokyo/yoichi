@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css">
+ </head>
+ <body>
+  <div class="reveal">
+   <div class="slides">
+    <section>
+     <h2>Diary</h2>
+    </section>
+    <section>
+     <section>
+      <h2>20171231 Sunday</h2>
+      <ul>
+       <li>I tried Python numpy module the other day.</li>
+       <li>ndarray object and its .T() (transpose) method were useful. </li>
+       <li>And numpy pretty prints these objects very much.</li>
+       <li>So I also think about data as (nd)array in general context.</li>
+       <li>List is considered a special case of data. But it is also common.</li>
+       <li>Almost every data can be thought as lists.</li>
+      </ul>
+     </section>
+     <section>
+      <ul>
+       <li>Like numpy, assuming rows as 0th dimention seems orthogonal.</li>
+       <li>Then we need transposing frequently.</li>
+       <li>Variable names are temporal and almost nothing.</li>
+       <li>If every data slots are allocated at first, program is evaluating function value by calculating dependencies of the slots.</li>
+       <li>It seems a functional paradigm.</li>
+      </ul>
+     </section>
+     <section>
+      <ul>
+       <li>If program or programming is the ndarray manipulation, how easy is it (in Python)?</li>
+       <li>Transposing can be done using builtin zip().</li>
+       <li>Flattening can be done by star notation unpacking.</li>
+       <li>Such array manipulation are considered basic but core technique.</li>
+       <li>Write a program is wiring between the slots.</li>
+       <li>This seems a declarative viewpoint.</li>
+      </ul>
+     </section>
+     <section>
+      <ul>
+       <li>Complexity is not everything but very important.</li>
+       <li>Copying lists and tuples cost much.</li>
+       <li>But they should be ignored in some extent.</li>
+       <li>Intend to increase complexity seems a reasonable approach.</li>
+       <li>Because it suppress "premature optimization is the root of all evil" (by Donald Knuth)</li>
+       <li>I will increase space complexity by manipulating big lists.</li>
+      </ul>
+     </section>
+     <section>
+      <ul>
+       <li>There are tuples and dictionaries in the world.</li>
+       <li>Tuples has positional values, which are named by natural numbers.</li>
+       <li>Variable names are important for human to think, but looks evil for math.</li>
+       <li>So the positional values count. String names should be modest.</li>
+       <li>But strings are very descriptive and most orthogonal for humans.</li>
+      </ul>
+     </section>
+    </section>
+   </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+  <script>
+Reveal.initialize({
+    history: true,
+    slideNumber: "c/t",
+    transition: "convex",
+    transitionSpeed: "fast",
+    dependencies: [
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/math/math.js', async: true }
+    ]
+});
+</script>
+ </body>
+</html>

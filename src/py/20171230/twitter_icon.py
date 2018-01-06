@@ -15,5 +15,6 @@ X, Y = np.meshgrid(x, y)
 Z1 = mlab.bivariate_normal(X, Y, 1, 1, 0, -3)
 Z2 = mlab.bivariate_normal(X, Y, 1, 1, 0, 0.25)
 Z = Z2 - Z1
-im = plt.imshow(Z, interpolation="bilinear", cmap=cm.gist_ncar, origin="lower", extent=[-3, 3, -3, 3], vmax=abs(Z).max(), vmin=-abs(Z).max())
+im = plt.imshow(Z, interpolation="bilinear", cmap=cm.gist_ncar, origin="lower",
+                extent=[-3, 3, -3, 3], vmax=abs(Z).max(), vmin=-abs(Z).max())
 plt.savefig("icon.png")
